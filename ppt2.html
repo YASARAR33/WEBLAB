@@ -13,6 +13,26 @@
 <p id="s"></p>
 <p id="a"></p>
 <p id="r"></p>
+<p id="m"></p>
+<p id="e"></p>
+<p id="n"></p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="k">Please visit Microsoft and Microsoft!</p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="b">Please visit Microsoft and Microsoft!</p>
+<p id="c"></p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="d">Hello World!</p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="f">Hello World!</p>
+<p id="g"></p>
+<p id="h"></p>
+<p id="i"></p>
 <script>
 document.getElementById("demo").innerHTML = "The sine value of 90 degrees is " + Math.sin(90 * Math.PI / 180);
 document.getElementById("y").innerHTML = Math.sqrt(64);
@@ -20,6 +40,49 @@ document.getElementById("a").innerHTML = Math.pow(8,2);
 document.getElementById("s").innerHTML =Math.min(0, 150, 30, 20, -8, -200);
 document.getElementById("a").innerHTML = Math.random();
 document.getElementById("r").innerHTML = Math.random();
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("m").innerHTML = text.length;
+let str = "Apple, Banana, Kiwi";
+document.getElementById("e").innerHTML = str.substring(7,13);
+let str1 = "Apple, Banana, Kiwi";
+document.getElementById("e").innerHTML = str1.substr(7,9)
+function myFunction() {
+  let text = document.getElementById("k").innerHTML; 
+  document.getElementById("n").innerHTML =
+  text.replace("Microsoft","W3Schools");
+}
+function myFunction() {
+  let text = document.getElementById("b").innerHTML; 
+  document.getElementById("b").innerHTML =
+  text.replace("Microsoft","W3Schools");
+}
+let text1 = "I love cats. Cats are very easy to love. Cats are very popular."
+text = text1.replaceAll("Cats","Dogs");
+text = text1.replaceAll("cats","dogs");
+
+document.getElementById("c").innerHTML = text;
+function myFunction() {
+  let text2 = document.getElementById("d").innerHTML;
+  document.getElementById("d").innerHTML =
+  text.toUpperCase();
+}
+function myFunction() {
+  let text4 = document.getElementById("demo").innerHTML;
+  document.getElementById("f").innerHTML =
+  text4.toLowerCase();
+}
+let text5 = "Hello";
+let text6 = "World!";
+let text7 = text5.concat(" ",text6);
+document.getElementById("g").innerHTML = text7;
+
+let text8 = "     Hello World!     ";
+let text9 = text8.trim();
+
+document.getElementById("h").innerHTML =
+"Length text8 = " + text8.length + "<br>Length text9 = " + text9.length;
+var text11 = "HELLO WORLD";
+document.getElementById("i").innerHTML = text11.charAt(0);
 </script>
 
 </body>
