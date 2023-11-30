@@ -1,4 +1,12 @@
 <html>
+<head>
+<title>Registration</title>
+<style>
+form{
+	background-color:Lavender;
+}
+</style>
+</head>
 <body>
 <?php
 require('connect.php');
@@ -13,7 +21,7 @@ $sql="insert into  user_registration(Name,Username,Phone_no,Address,Password)val
 $result=mysqli_query($conn,$sql);
 if($result)
 {
-	echo "New records successfully created";
+	header('Location: login1.php');
 }
 mysqli_close($conn);
 }
