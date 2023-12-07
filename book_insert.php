@@ -4,7 +4,7 @@
 <style>
 form
 {
-	background-color:Aquamarine;
+	background-color:Green;
 }
 </style>
 </head>
@@ -17,8 +17,8 @@ if(isset($_POST['sub']))
 	$author=$_POST['Author'];
 	$publisher=$_POST['Publisher'];
 	$quantity=$_POST['Quantity'];
-	$prize=$_POST['Prize'];
-	$sql="insert into library(Book_name,Author,Publisher,Quantity,prize)values('$name','$author','$publisher','$quantity','$prize')";
+	$price=$_POST['Price'];
+	$sql="insert into library(Book_name,Author,Publisher,Quantity,Price)values('$name','$author','$publisher','$quantity','$price')";
 	$result=mysqli_query($conn,$sql);
 if($result)
 {
@@ -45,8 +45,8 @@ else
 	<label for="qn">Quantity:&nbsp;&nbsp;&nbsp;&nbsp;</label>
 	<input type="text" name="Quantity" id="qn" ><br><br>
 	
-	<label for="prize">Prize:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-	<input type="text" name="Prize" id="prize"><br><br>
+	<label for="Price">Price:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+	<input type="text" name="Price" id="prize"><br><br>
 
 	<input type="submit" name="sub" id="sub" value="Submit">
 	<input type="reset" name="rst" id="rst" value="Reset">
