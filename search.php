@@ -8,15 +8,18 @@ body
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size:cover;
-	color:Gold;
+	color:PaleGreen;
 }
 </style>
 </head>
 <body>
-<big>
+<big><b>
 <?php
 require('connect.php');
-$sql="select * from library";
+if(isset($_POST['sub']))
+{
+$id=$_POST['txt1'];
+$sql="select * from library where Id=$id";
 $result=mysqli_query($conn,$sql);
 if(mysqli_num_rows($result)>0)
 {
@@ -29,12 +32,19 @@ if(mysqli_num_rows($result)>0)
 		echo "Prize:".$row['Prize']."<br><br>";
 	}
 }
+mysqli_close($conn);
+}
 else
 {
-	echo "No Results";
-}
-mysqli_close($conn);
 ?>
-</big>
+</big></b>
+<form method="POST" align="center">
+<h2>Enter the Id of the book for Details:
+<input type="text" name="txt1" ></h2><br>
+<input type="submit" name="sub" value="Submit">
+<?php
+}
+?>
+</form>
 </body>
 </html>

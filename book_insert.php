@@ -29,7 +29,7 @@ mysqli_close($conn);
 else
 {
 ?>
-<form align="center" method="POST" action="">
+<form align="center" method="POST" >
 <fieldset>
 	<h1><u>Book Details</u></h1>
 	
