@@ -1,6 +1,6 @@
-<html>
-<head>
-<title>search</title>
+
+<html><head>
+<title>h</title>
 </head>
 <body>
 <?php
@@ -27,15 +27,6 @@ echo"no results";
 }	
 mysqli_close($conn);
 }
-else
-{
 ?>
-<form method="POST" align="center">
-<input type="text" name="name">
-<input  type="submit"  name="submit"></button>
-<?php
-}
-?>
-</form>
 </body>
 </html>

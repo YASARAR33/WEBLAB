@@ -8,22 +8,15 @@ require("connect.php");
 if(isset($_POST["submit"]))
 {
 $id=$_POST["name"];
-$sql="select * from library where id=$id";
+$sql="delete  from library where id=$id";
 $result=mysqli_query($conn,$sql);
-if(mysqli_num_rows($result)>0)
+if($result)
 {
-while($row=mysqli_fetch_assoc($result))
-	{
-	 echo"bookname".$row["Book_name"]."<br>";
-	 echo"author".$row["Author"]."<br>";
-	 echo"publisher".$row["Publisher"]."<br>";
-	 echo"quantity".$row["Quantity"]."<br>";
-	 echo"price".$row["Price"]."<br>";
-	}
+echo "one record deleted";
 }
 else
 {
-echo"no results";
+echo"delete failed";
 }	
 mysqli_close($conn);
 }
